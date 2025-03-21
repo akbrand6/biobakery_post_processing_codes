@@ -15,7 +15,7 @@ def get_main_dir(config_file):
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Path to the config.sh file
-config_file = os.path.join(script_dir, 'UPDATE_ME.sh')
+config_file = os.path.join(script_dir, 'config.sh')
 
 # Get the main_dir from the config.sh file
 main_dir = get_main_dir(config_file)
@@ -28,6 +28,7 @@ output_file=f"{main_dir}/code-output/metaphlan/metaphlan_absabund.tsv"
 
 df_abundance = pd.read_csv(metaphlan_relabun_file, sep='\t', header=0, skiprows=1,index_col=0)
 nreads = pd.read_csv(nread_file, sep='\t',header=0,index_col=0)
+nreads = nreads.rename(index={ii:str(ii) for ii in nreads.index.values})
 df_abundance = df_abundance / 100.0
 df_absolutes = df_abundance*nreads.loc[df_abundance.columns,:].T.values
 df_absolutes = df_absolutes.round().astype(int)

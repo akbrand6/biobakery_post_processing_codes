@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source "$(dirname "$0")/UPDATE_ME.sh"
+source "$(dirname "$0")/config.sh"
 
 pattern1="#[0-9]\+ reads processed"
 pattern2="[0-9]\+"

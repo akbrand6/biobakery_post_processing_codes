@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source "$(dirname "$0")/UPDATE_ME.sh"
+source "$(dirname "$0")/config.sh"
 
 input_dir="${main_dir}/workflow-output"
 output_dir="${main_dir}/code-output"

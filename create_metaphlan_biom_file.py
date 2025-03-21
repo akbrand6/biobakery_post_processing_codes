@@ -15,7 +15,7 @@ def get_main_dir(config_file):
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Path to the config.sh file
-config_file = os.path.join(script_dir, 'UPDATE_ME.sh')
+config_file = os.path.join(script_dir, 'config.sh')
 
 # Get the main_dir from the config.sh file
 main_dir = get_main_dir(config_file)

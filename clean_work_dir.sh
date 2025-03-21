@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source "$(dirname "$0")/UPDATE_ME.sh"
+source "$(dirname "$0")/config.sh"
 
 work_dir="${main_dir}/workflow-output/work"
 output_file="${main_dir}/code-output/clean_work_dir-log.txt"

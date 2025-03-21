@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source "$(dirname "$0")/UPDATE_ME.sh"
+source "$(dirname "$0")/config.sh"
 
 input_directory="${main_dir}/workflow-output"
 output_file="tidy-transfer-log-file.txt"
